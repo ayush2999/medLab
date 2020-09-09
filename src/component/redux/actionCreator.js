@@ -20,7 +20,7 @@ export const fetchLifeCycle = () => (dispatch) => {
             throw errmess;
       })
     .then(response => response.json())
-    //  .then(lifeCyclePackages =>dispatch(addLifeCycle(lifeCyclePackages)))
+    // .then(lifeCyclePackages =>dispatch(console.log(lifeCyclePackages)))
     .then(lifeCyclePackages => lifeCyclePackages.map( pack =>{
      var heart= pack.selectPackage.filter(fetchPackage=>fetchPackage.name==="Heart")[0]
      var liver=pack.selectPackage.filter(fetchPackage=>fetchPackage.name==="Liver")[0]
